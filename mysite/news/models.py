@@ -2,6 +2,7 @@ from django.db import models
 
 
 class News(models.Model):
+    objects = None
     title = models.CharField(max_length=255, verbose_name='Наименование')
     content = models.TextField(blank=True, verbose_name='Контент')
     created_at = models.DateTimeField(auto_now_add=True, verbose_name='Дата публикации')
