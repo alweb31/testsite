@@ -26,7 +26,7 @@
                 </div>
             </div>
             <div class="card-footer text-muted">
-                {{ item.created_at|date:'d-m-Y H:i' }}
+                <p>Создано: {{ item.created_at|date:'d-m-Y H:i' }}</p>
             </div>
         </div>
     {% endfor %}
