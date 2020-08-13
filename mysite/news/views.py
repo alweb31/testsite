@@ -42,7 +42,7 @@ def user_logout(request):
     return redirect('login')
 
 
-def test(request):
+def contact(request):
     if request.method == 'POST':
         form = ContactForm(request.POST)
         if form.is_valid():
@@ -57,7 +57,7 @@ def test(request):
             messages.error(request, 'Ошибка при отправке')
     else:
         form = ContactForm()
-    return render(request, 'news/test.html', {"form": form})
+    return render(request, 'news/contact.html', {"form": form})
 
 
 class HomeNews(MyMixin, ListView):
